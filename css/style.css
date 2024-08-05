@@ -1,0 +1,273 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+    --color-font-white: #fefefe;
+    --color-bg-green: #385b41;
+    --color-bg-lightgreen: #e9f6ec;
+}
+
+/* ------------------------------
+リセットcss
+------------------------------ */
+html {
+    color: #000;
+    background: #fff;
+}
+
+body {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; /* Safari */
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1rem; /* 16px */
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: "";
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select,
+button {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-size: 1rem;
+    border-radius: 0;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: inherit;
+}
+
+input,
+textarea,
+select {
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    display: block;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+legend {
+    color: #000;
+}
+
+main {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+svg {
+    display: block;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------
+全体共通のスタイル
+------------------------------ */
+
+html {
+    background-color: #fefefe;
+}
+
+body {
+    line-height: 1.6;
+    color: #1f1f1f;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.u-visually-hidden {
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    margin: -1px !important;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    display: block;
+}
+
+.accordion-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion-wrapper {
+        max-width: 680px;
+    }
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--color-bg-green);
+    color: var(--color-font-white);
+    cursor: pointer;
+    position:relative;
+}
+
+.accordion-header::before,
+.accordion-header::after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: var(--color-font-white);
+}
+
+.accordion-header::after {
+    transition: .2s;
+    transform: rotate(90deg);
+}
+
+details.is-open .accordion-header::after {
+    opacity: 0;
+}
+
+.accordion-content {
+    overflow: hidden;
+}
+
+.accordion-text {
+    padding: 16px 24px;
+    min-height: auto;
+    background-color: var(--color-bg-lightgreen);
+}
