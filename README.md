@@ -2,7 +2,7 @@
 
 # 複合モジュール --- FAQ (アコーディオン)
 
-表示：https://matsu-web.blog/portfolio.matsu-web.blog/composite-module/FAQ-accordion/index.html
+表示：https://portfolio.matsu-web.blog/composite-module/FAQ-accordion/index.html
 
 ## 連絡先
 [@matsunota_t](https://twitter.com/matsunota_t)
